@@ -1,4 +1,4 @@
-# latex-class
+# suvresdpl
 My great latex class
 
 ## Header and footer
