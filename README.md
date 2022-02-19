@@ -1,7 +1,7 @@
 # latex-class
 My great latex class
 
-# Header and footer
+## Header and footer
 
 In class are 3 header style. We can use one of them in main file.
 ```tex
@@ -20,7 +20,7 @@ In class are 3 header style. We can use one of them in main file.
 
 
 
-## \headAndFootWithShort and \footShort
+### \headAndFootWithShort and \footShort
 With use this tag the pages look:
 ![HeaderOne](./images/headerOne.png)    
   
@@ -32,14 +32,37 @@ in this configuration:
 \headAndFootWithShort
 \footShort
 ```
+    
+For `\footShort` we need this marks to config shorts:
+```tex
+\tShortauthor{B. Błyszcz}
+\tShorttitle{Praca o Lorem Ipsum} 
+```
 
-## \headAndFoot
+### \headAndFoot
 With this tag, the pages look:
 ![HeaderThree](./images/headerThree.png)
 
-## \headAndFootCasual
+### \headAndFootCasual
 With this tag, the pages look:
 ![HeaderFour](./images/headerFour.png)
 
 
 
+## Table title
+This title is make for academic report. For config we need this marks
+
+```tex
+
+\author{Bartosz Błyszcz}
+\title{Praca dotycząca Lorem Ipsum i jego wyższości nad krabami}
+\tIndex{401928}
+\tGroup{01}
+\tFaculty{WIMiIP}
+\tField{Informatyka techniczna}
+\date{2023-01-01}
+
+```
+  
+and this `\tablepage` in document section.
+![Table_title](../tableTitle.png)
