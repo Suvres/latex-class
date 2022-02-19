@@ -6,15 +6,15 @@ My great latex class
 In class are 3 header style. We can use one of them in main file.
 ```tex
 
-    % --- First Header ---
-    % \headAndFootWithShort
-    % \footShort
+% --- First Header ---
+% \headAndFootWithShort
+% \footShort
     
-    % --- Second Header ---
-	% \headAndFoot
+% --- Second Header ---
+% \headAndFoot
 
-    % --- Third Header ---
-	% \headAndFootCasual
+% --- Third Header ---
+% \headAndFootCasual
 
 ```
 
