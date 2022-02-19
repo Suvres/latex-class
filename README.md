@@ -66,3 +66,19 @@ This title is make for academic report. For config we need this marks
   
 and this `\tablepage` in document section.
 ![Table_title](./images/tableTitle.png)
+
+
+## Fancy title
+This title is simple and casual. For config we need this marks
+
+```tex
+
+\author{Bartosz Błyszcz}
+\title{Praca dotycząca Lorem Ipsum i jego wyższości nad krabami}
+\secTitle{Laboratorium 11}
+\date{2023-01-01}
+
+```
+  
+and this `\fancypage` in document section.
+![Fancy_title](./images/fancypage.png)

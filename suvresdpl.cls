@@ -12,8 +12,6 @@
 \NeedsTeXFormat{LaTeX2e} 
 \ProvidesClass{suvresdpl} 
 
-
-
 \RequirePackage{kvoptions}
 
 \DeclareStringOption[pl]{language}
@@ -43,6 +41,7 @@
 \RequirePackage{amsmath}
 \RequirePackage{amsthm}
 
+\RequirePackage{ragged2e}
 \RequirePackage{graphicx}
 \RequirePackage[usenames]{color}
 \RequirePackage{url}
@@ -76,6 +75,8 @@
 \def\tIndex#1        {\gdef\@tIndex{#1}}
 \def\tGroup#1        {\gdef\@tGroup{#1}}
 \def\tField#1        {\gdef\@tField{#1}}
+\def\secTitle#1        {\gdef\@secTitle{#1}}
+
 
 % --- Table Title
 
@@ -111,6 +112,33 @@
     
     \linespread{1.5}
 }
+
+
+% --- Fance Title
+
+\newcommand{\fancypage}{%
+
+    \titlepage
+    \centering
+    \line(1,0){400} \\
+    [4mm]
+    \textbf{\textsc{ \Large{ \@title}}} \\
+    \line(1,0){300} \\
+    [4mm]
+    \textsc{\large{ \@secTitle}} \\
+
+    \vspace*{\fill}
+
+    \begin{flushright}
+        \textsc{
+            \@author \\
+            \@date
+        }            
+    \end{flushright}
+    
+    \clearpage
+}
+
 
 
 % =============================================================================
@@ -334,9 +362,19 @@
            {Ś}{{\'S}}1
            {Ź}{{\'Z}}1
            {Ż}{{\.Z}}1,
-	basicstyle=\footnotesize\ttfamily,
+    captionpos=b,
+    backgroundcolor=\color{lstBackground},   
+    commentstyle=\ttfamily\itshape\color{gray},
+    tabsize = 4, %% set tab space width
+    showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+    numbers = left, %% display line numbers on the left
+    keywordstyle = \color{blue}, %% set keyword color
+    stringstyle = \color{red}, %% set string color
+    rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+    basicstyle = \small \ttfamily , %% set listing font and size
+    breaklines = true, %% enable line breaking
+    numberstyle = \tiny,
 }
-
 
 % =============================================================================
 %    SEC:   Konfiguracja tabel
@@ -396,6 +434,8 @@
 \definecolor{lightblue}{RGB}{181 212 239}
 \definecolor{strongorange}{RGB}{247 148  30}
 \definecolor{lighteryellow}{RGB}{242 245 205}
+\definecolor{lstBackground}{rgb}{0.95,0.95,0.90}
+
 
 
 % =============================================================================
