@@ -65,4 +65,4 @@ This title is make for academic report. For config we need this marks
 ```
   
 and this `\tablepage` in document section.
-![Table_title](../tableTitle.png)
+![Table_title](./tableTitle.png)
