@@ -22,14 +22,15 @@ In class are 3 header style. We can use one of them in main file.
 
 ## \headAndFootWithShort and \footShort
 With use this tag the pages look:
-![HeaderOne](./images/headerOne.png)
+![HeaderOne](./images/headerOne.png)    
+  
 If we want use short title, we can use `\footShort` too:
 ![HeaderTwo](./images/headerTwo.png)
 
 in this configuration:
 ```tex
-	\headAndFootWithShort
-    \footShort
+\headAndFootWithShort
+\footShort
 ```
 
 ## \headAndFoot
