@@ -67,15 +67,16 @@
 % SEC:   Polecenia wymagane m.in. do generowania strony tytułowej
 % =============================================================================
 
-\def\tShorttitle#1   {\gdef\@tShorttitle{#1}}
-\def\tShortauthor#1  {\gdef\@tShortauthor{#1}}
-\def\tTitle#1        {\gdef\@tTitle{#1}}
-\def\tFaculty#1      {\gdef\@tFaculty{#1}}
-\def\tYear#1         {\gdef\@tYear{#1}}
-\def\tIndex#1        {\gdef\@tIndex{#1}}
-\def\tGroup#1        {\gdef\@tGroup{#1}}
-\def\tField#1        {\gdef\@tField{#1}}
-\def\secTitle#1        {\gdef\@secTitle{#1}}
+\def\tShorttitle#1              {\gdef\@tShorttitle{#1}}
+\def\tShortauthor#1             {\gdef\@tShortauthor{#1}}
+\def\tTitle#1                   {\gdef\@tTitle{#1}}
+\def\tFaculty#1                 {\gdef\@tFaculty{#1}}
+\def\tYear#1                    {\gdef\@tYear{#1}}
+\def\tIndex#1                   {\gdef\@tIndex{#1}}
+\def\tGroup#1                   {\gdef\@tGroup{#1}}
+\def\tField#1                   {\gdef\@tField{#1}}
+\def\secTitle#1                 {\gdef\@secTitle{#1}}
+\def\acknowledgements#1         {\gdef\@acknowledgements{#1}}
 
 
 % --- Table Title
@@ -137,6 +138,55 @@
     \end{flushright}
     
     \clearpage
+	\thispagestyle{empty} 
+	
+	% Strona z podziękowaniami.
+	{~}\vspace{20mm}
+	
+	\clearpage
+	\titlepage
+	
+	\vspace*{15cm} \vfill
+	\begin{flushright} 
+		\begin{minipage}[!h]{10cm}
+			{\Large\itshape \@acknowledgements}
+		\end{minipage}
+	\end{flushright}
+	
+	\clearpage
+	\thispagestyle{empty}
+	
+	~ \newpage
+	
+	% Obecna strona będzie mieć nr 5.
+	\setcounter{page}{5}
+}
+
+
+% --- Simple Fance Title
+
+\newcommand{\simplefancypage}{%
+
+    \titlepage
+    \centering
+    \line(1,0){400} \\
+    [4mm]
+    \textbf{\textsc{ \Large{ \@title}}} \\
+    \line(1,0){300} \\
+    [4mm]
+    \textsc{\large{ \@secTitle}} \\
+
+    \vspace*{\fill}
+
+    \begin{flushright}
+        \textsc{
+            \@author \\
+            \@date
+        }            
+    \end{flushright}
+    
+	% Obecna strona będzie mieć nr 2.
+	\setcounter{page}{2}
 }
 
 
@@ -466,3 +516,4 @@
 	\begin{description}[leftmargin=\eqwheremargin, itemsep=0cm, labelsep=0cm]
 }
 {\end{description}}
+
