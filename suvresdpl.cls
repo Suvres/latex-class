@@ -22,7 +22,7 @@
 \ProcessOptions\LoadClass[a4paper,twoside,openright]{report} 
 
 \RequirePackage{xstring}
-
+\RequirePackage{cmap}
 
 \RequirePackage{times}
 \RequirePackage[T1]{fontenc}
