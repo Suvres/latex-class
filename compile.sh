@@ -31,9 +31,9 @@ cd _tex;
 ln -s ../images images
 
 
-pdflatex $main; 
-pdflatex $main;
-pdflatex $main;
+xelatex $main; 
+xelatex $main;
+xelatex $main;
 
 cp main.pdf ../main.pdf
 cd ..

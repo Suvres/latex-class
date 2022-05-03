@@ -23,13 +23,11 @@
 
 \RequirePackage{xstring}
 
+\RequirePackage[english, polish]{babel}
 
-\RequirePackage{tgtermes}
-
-\RequirePackage[english,polish]{babel}
-
-% Użyj polskiego łamania wyrazów (zamiast domyślnego angielskiego).
-\RequirePackage[OT4, plmath, MeX]{polski}
+% czcionka times new roman
+\RequirePackage{fontspec}
+\setmainfont{Times New Roman}
 
 % Użyj kodowania UTF-8.
 \RequirePackage[utf8]{inputenc}
