@@ -437,6 +437,7 @@
 \RequirePackage{booktabs}
 \RequirePackage{makecell}
 \RequirePackage[flushleft]{threeparttable}
+\renewcommand{\thempfootnote}{\arabic{mpfootnote}} 
 
 % defines the X column to use m (\parbox[c]) instead of p (`parbox[t]`)
 \newcolumntype{C}[1]{>{\hsize=#1\hsize\centering\arraybackslash}X}
@@ -518,4 +519,24 @@
 }
 {\end{description}}
 
+
+% SEC:   Kapitaliki
+% =============================================================================
+
+% ----------------------------------------------------------------------------
+%    Konfiguracja kapitalików dla Times New Roman
+% ----------------------------------------------------------------------------
+
+\newfontfamily\tgtermes{TeX Gyre Termes}
+\makeatletter
+  \begingroup
+    \tgtermes
+    \DeclareFontShape{\f@encoding}{\rmdefault}{m}{sc}{%
+      <-> ssub * \f@family/m/sc}{}
+    \DeclareFontShape{\f@encoding}{\rmdefault}{bx}{sc}{%
+      <-> ssub * \f@family/bx/sc}{}
+      \DeclareFontShape{\f@encoding}{\rmdefault}{b}{sc}{%
+      <-> ssub * \f@family/b/sc}{}
+  \endgroup
+\makeatother
 
