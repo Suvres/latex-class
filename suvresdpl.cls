@@ -22,15 +22,13 @@
 \ProcessOptions\LoadClass[a4paper,twoside,openright]{report} 
 
 \RequirePackage{xstring}
-\RequirePackage{cmap}
+
 
 \RequirePackage{tgtermes}
-% nie obsługuje kopiowania polskich znaków
-% \RequirePackage[T1]{fontenc}
 
 \RequirePackage[english,polish]{babel}
 
-% Użyj polskiego łamania wyrazów (zamiast domyślnego angielskiego). Oraz polskiego budowania
+% Użyj polskiego łamania wyrazów (zamiast domyślnego angielskiego).
 \RequirePackage[OT4, plmath, MeX]{polski}
 
 % Użyj kodowania UTF-8.
@@ -185,8 +183,9 @@
             \@date
         }            
     \end{flushright}
-    
-	% Obecna strona będzie mieć nr 2.
+    \clearpage
+    \thispagestyle{empty}
+	% Obecna strona będzie mieć nr 1.
 	\setcounter{page}{2}
 }
 
@@ -424,6 +423,9 @@
     rulecolor = \color{black}, %% set frame color to avoid being affected by text color
     basicstyle = \small \ttfamily , %% set listing font and size
     breaklines = true, %% enable line breaking
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    basicstyle=\ttfamily,
+    columns=fullflexible,
     numberstyle = \tiny,
 }
 
@@ -517,4 +519,5 @@
 	\begin{description}[leftmargin=\eqwheremargin, itemsep=0cm, labelsep=0cm]
 }
 {\end{description}}
+
 
