@@ -24,13 +24,14 @@
 \RequirePackage{xstring}
 \RequirePackage{cmap}
 
-\RequirePackage{times}
-\RequirePackage[T1]{fontenc}
+\RequirePackage{tgtermes}
+% nie obsługuje kopiowania polskich znaków
+% \RequirePackage[T1]{fontenc}
 
 \RequirePackage[english,polish]{babel}
 
-% Użyj polskiego łamania wyrazów (zamiast domyślnego angielskiego).
-\RequirePackage{polski}
+% Użyj polskiego łamania wyrazów (zamiast domyślnego angielskiego). Oraz polskiego budowania
+\RequirePackage[OT4, plmath, MeX]{polski}
 
 % Użyj kodowania UTF-8.
 \RequirePackage[utf8]{inputenc}
