@@ -26,6 +26,11 @@ then
 	exit 2
 fi
 
+for x in *.bib
+do
+	cat $x > _tex/$x
+done
+
 cp ./suvresdpl.cls ./_tex/
 cd _tex;
 ln -s ../images images
