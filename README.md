@@ -1,6 +1,7 @@
 # suvresdpl
 My great latex class
 
+
 ## Header and footer
 
 In class are 3 header style. We can use one of them in main file.
